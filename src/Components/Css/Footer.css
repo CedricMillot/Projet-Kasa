@@ -1,0 +1,21 @@
+.black-bg {
+  background-color: black;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.white-logo {
+  filter: brightness(0) invert(1);
+  padding: 70px 500px 30px 500px;
+}
+
+.white-text {
+  color: white;
+  padding-bottom: 30px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

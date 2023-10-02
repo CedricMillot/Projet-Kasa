@@ -1,0 +1,23 @@
+/* Container styles */
+.container {
+  width: 90%;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  height: 700px;
+}
+
+/* Image styles */
+.container img {
+  width: 25%;
+  border-radius: 25px;
+}

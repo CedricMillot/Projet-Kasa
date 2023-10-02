@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 90%;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav li {
+  margin-left: 30px;
+}
+.nav a {
+  color: red;
+}
