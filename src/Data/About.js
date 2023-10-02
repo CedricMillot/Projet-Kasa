@@ -13,7 +13,7 @@ function About() {
         <label
           htmlFor="menu1"
           onClick={() => setMenu1Open(!menu1Open)}
-          className="menu-button" // Appliquer la classe CSS
+          className="menu-button" 
         >
           FIabilité
         </label>
