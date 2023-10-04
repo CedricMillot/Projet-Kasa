@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Css/Header.css';
+import '../Css/Header.css';
 
 function Header() {
   // Utilisez le chemin relatif vers le logo dans le dossier public
@@ -9,15 +9,14 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-       
-        <img src={logoPath} alt="LOGO" />
+        <img src={logoPath} alt="LOGO" className="logo-image" />
       </div>
       <nav className="nav">
-        <ul>
-          <li>
+        <ul className="nav-list">
+          <li className="nav-item">
             <Link to="/" className="link">Accueil</Link>
           </li>
-          <li>
+          <li className="nav-item">
             <Link to="/about" className="link">À propos</Link>
           </li>
         </ul>

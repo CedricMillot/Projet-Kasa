@@ -5,10 +5,13 @@ import Home from './Data/Home';
 import About from './Data/About';
 import Navigation from './Data/Navigation';
 import Wrongway from './Data/Wrongway';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Bande from './Components/Bande';
-import Container from './Components/Container';
+import Header from './Components/Component/Header';
+import Footer from './Components/Component/Footer';
+import Bande from './Components/Component/Bande';
+import Container from './Components/Component/Container';
+import './App.css'; // Importez le fichier App.css ici
+
+
 
 
 function App() {
@@ -25,7 +28,7 @@ function App() {
           <Bande imageSrc="/Paysage2.jpg" /> 
           <About />
         </>} />
-        <Route path="/contact" element={<Navigation />} />
+        <Route path="/Navigation" element={<Navigation />} />
         <Route path="*" element={<Wrongway />} />
       </Routes>
       <Footer />

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Css/Bande.css';
+import '../Css/Bande.css';
 
 function Bande({ imageSrc }) {
   return (

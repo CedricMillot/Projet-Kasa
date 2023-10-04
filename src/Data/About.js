@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './About.css'; // Importer le fichier CSS
+import './Data-css/About.css';
 
 function About() {
   const [menu1Open, setMenu1Open] = useState(false);
@@ -17,7 +17,7 @@ function About() {
         >
           FIabilité
         </label>
-        {menu1Open && <p>Explication pour le Menu 1</p>}
+        {menu1Open && <p>Les annonces postées sur Kasa garantissent une fiabilité totale.Les photos sont conformes aux logements,et toutes les informations sont régulièrement vérifiées par nos équipes.</p>}
       </div>
       <div>
         <label
@@ -27,7 +27,7 @@ function About() {
         >
           Respect
         </label>
-        {menu2Open && <p>Explication pour le Menu 2</p>}
+        {menu2Open && <p>La bienveillance fait partie des valeurs fondatrice de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>}
       </div>
       <div>
         <label
@@ -37,7 +37,7 @@ function About() {
         >
           Service 
         </label>
-        {menu3Open && <p>Explication pour le Menu 3</p>}
+        {menu3Open && <p>Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.</p>}
       </div>
       <div>
         <label
@@ -47,7 +47,7 @@ function About() {
         >
           Sécurité
         </label>
-        {menu4Open && <p>Explication pour le Menu 4</p>}
+        {menu4Open && <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire,cela permet à nos équipes de vérifier que les standars sont bien respectés. Nous organison également des ateliers sur la sécurité domestique pour nos hôtes.</p>}
       </div>
     </div>
   );
