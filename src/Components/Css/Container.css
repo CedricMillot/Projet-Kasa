@@ -1,16 +1,23 @@
-.container {
-  width: 100%;
-  border-radius: 25px;
-  overflow: hidden;
-  margin: 50px auto 0;
-  background-color: #f6f6f6;
+/* Container.css */
+.image-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  gap: 30px;
+  padding: 30px;
+  margin-top: 30px;
 }
 
-.container img {
-  border-radius: 25px;
-  margin: 20px;
+.image {
+  margin: 10px; /* Espacement entre les images */
+  border-radius: 25px; /* Bordure arrondie */
+  overflow: hidden; /* Masquer le contenu qui dépasse */
+}
+
+.thumbnail {
+  width: 300px; /* Largeur souhaitée pour l'image */
+  height: 300px; /* Hauteur souhaitée pour l'image (pour la rendre carrée) */
+  object-fit: cover; /* Ajustement de l'image pour qu'elle couvre la boîte */
 }

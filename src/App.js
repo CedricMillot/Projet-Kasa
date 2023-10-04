@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import Home from './Data/Home';
 import About from './Data/About';
@@ -16,23 +16,25 @@ import './App.css'; // Importez le fichier App.css ici
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<>
-          <Bande imageSrc="/Paysage.jpg" />
-          <Home />
-          <Container/>
-        </>} />
-        <Route path="/about" element={<>
-          <Bande imageSrc="/Paysage2.jpg" /> 
-          <About />
-        </>} />
-        <Route path="/Navigation" element={<Navigation />} />
-        <Route path="*" element={<Wrongway />} />
-      </Routes>
-      <Footer />
-    </div>
+   
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<>
+            <Bande imageSrc="/Paysage.jpg" />
+            <Home />
+            <Container/>
+          </>} />
+          <Route path="/about" element={<>
+            <Bande imageSrc="/Paysage2.jpg" /> 
+            <About />
+          </>} />
+          <Route path="/Navigation" element={<Navigation />} />
+          <Route path="*" element={<Wrongway />} />
+        </Routes>
+        <Footer />
+      </div>
+ 
   );
 }
 
