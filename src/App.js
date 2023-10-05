@@ -1,40 +1,25 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-
-import Home from './Data/Home';
-import About from './Data/About';
-import Navigation from './Data/Navigation';
-import Wrongway from './Data/Wrongway';
-import Header from './Components/Component/Header';
-import Footer from './Components/Component/Footer';
-import Bande from './Components/Component/Bande';
-import Container from './Components/Component/Container';
-import './App.css'; // Importez le fichier App.css ici
-
-
-
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import WrongWay from "./pages/WrongWay/WrongWay";
+import StayDetails from "./pages/StayDetails/StayDetails";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-   
-      <div>
-        <Header />
-        <Routes>
-          <Route path="/" element={<>
-            <Bande imageSrc="/Paysage.jpg" />
-            <Home />
-            <Container/>
-          </>} />
-          <Route path="/about" element={<>
-            <Bande imageSrc="/Paysage2.jpg" /> 
-            <About />
-          </>} />
-          <Route path="/Navigation" element={<Navigation />} />
-          <Route path="*" element={<Wrongway />} />
-        </Routes>
-        <Footer />
-      </div>
- 
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/:id" element={<StayDetails />} />
+        <Route path="*" element={<WrongWay />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

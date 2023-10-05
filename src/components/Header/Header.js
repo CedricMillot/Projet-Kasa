@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../Css/Header.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   // Utilisez le chemin relatif vers le logo dans le dossier public
-  const logoPath = process.env.PUBLIC_URL + '/LOGO.jpg';
+  const logoPath = process.env.PUBLIC_URL + "/LOGO.jpg";
 
   return (
     <header className="header">
@@ -14,10 +14,14 @@ function Header() {
       <nav className="nav">
         <ul className="nav-list">
           <li className="nav-item">
-            <Link to="/" className="link">Accueil</Link>
+            <Link to="/" className="link">
+              Accueil
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="link">À propos</Link>
+            <Link to="/about" className="link">
+              À propos
+            </Link>
           </li>
         </ul>
       </nav>

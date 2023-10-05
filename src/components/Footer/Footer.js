@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import '../Css/Footer.css'; // Importez le fichier CSS
+import "./Footer.css";
 
 function Footer() {
-
-  const logoPath = process.env.PUBLIC_URL + '/LOGO.png';
+  const logoPath = process.env.PUBLIC_URL + "/LOGO.png";
   return (
     <footer className="footer black-bg">
       <div className="footer-content">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Wrongway() {
+function WrongWay() {
   return (
     <div>
       <h1>Home Page</h1>
@@ -9,4 +9,4 @@ function Wrongway() {
   );
 }
 
-export default Wrongway;
+export default WrongWay;
