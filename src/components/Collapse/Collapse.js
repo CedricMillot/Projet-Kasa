@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 import "./Collapse.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 function Collapse({ title, description }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
-      <label
-        htmlFor="menu1"
-        onClick={() => setIsOpen(!isOpen)}
-        className="menu-button"
-      >
-        {title}
+      <label htmlFor="menu1" className="menu-button">
+        <div>{title}</div>
+        <div onClick={toggleCollapse}>
+          <FontAwesomeIcon icon={faChevronUp} />
+        </div>
       </label>
-      {isOpen && description}
+      <div className={`description-container ${isOpen ? "open" : ""}`}>
+        {description}
+      </div>
     </div>
   );
 }
+
 export default Collapse;

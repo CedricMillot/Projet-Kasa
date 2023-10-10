@@ -1,17 +1,36 @@
 .menu-button {
-  border-radius: 5px;
-  background: var(--Red, #ff6060);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
   cursor: pointer;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: white;
-  font-weight: bold;
-  padding-right: 800px;
+  background-color: #ff6060;
+  padding: 10px 20px 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 24px;
 }
 
 .menu-container p {
-  overflow-wrap: break-word; /* Permet au texte de se couper et d'aller à la ligne en cas de besoin */
-  max-width: 800px;
+  overflow-wrap: break-word;
+  max-width: 400px;
   padding-left: 20px;
+  color: #ff6060;
+  font-size: 20px;
+}
+
+.menu-button i.fa-solid {
+  color: white;
+}
+
+.description-container {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.description-container.open {
+  display: block;
 }
