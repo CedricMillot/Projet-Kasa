@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import WrongWay from "./pages/WrongWay/WrongWay";
+import NotFound from "./pages/NotFound/NotFound";
 import StayDetails from "./pages/StayDetails/StayDetails";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/:id" element={<StayDetails />} />
-        <Route path="*" element={<WrongWay />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

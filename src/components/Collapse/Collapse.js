@@ -12,7 +12,7 @@ function Collapse({ title, description }) {
 
   return (
     <div>
-      <label htmlFor="menu1" className="menu-button">
+      <label htmlFor="menu" className={`menu-button ${isOpen ? "open" : ""}`}>
         <div>{title}</div>
         <div onClick={toggleCollapse}>
           <FontAwesomeIcon icon={faChevronUp} />

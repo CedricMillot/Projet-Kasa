@@ -20,3 +20,21 @@
   text-decoration: none;
   color: red;
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+  .logo {
+    width: 30%;
+  }
+  .logo-image {
+    width: 100%;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}

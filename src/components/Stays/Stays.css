@@ -23,15 +23,37 @@
 .image {
   position: relative;
   display: inline-block;
-  margin: 10px; /* Ajustez la marge selon vos besoins */
+  margin: 10px;
 }
 
 .image-title {
   position: absolute;
-  top: 320px; /* Ajustez la position verticale du titre par rapport à l'image */
-  left: 10px; /* Ajustez la position horizontale du titre par rapport à l'image */
-  color: #fff; /* Couleur du texte du titre */
-  padding: 5px 10px; /* Espace de remplissage autour du texte du titre */
-  font-size: 14px; /* Taille de police du titre */
-  border-radius: 5px; /* Coins arrondis pour le titre */
+  top: 280px;
+  left: 10px;
+  color: white;
+  font-family: Montserrat;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  max-width: 250px;
+}
+
+@media screen and (max-width: 500px) {
+  .image-container {
+    background-color: white;
+    padding: 0;
+  }
+  .thumbnail {
+    width: 150%;
+    height: 300px;
+  }
+  .image-title {
+    position: absolute;
+    top: 170px;
+    left: 10px;
+    color: white;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+  }
 }

@@ -12,6 +12,12 @@ body {
   margin-right: 50px; /* Marge à droite */
 }
 
+@media screen and (max-width: 390px) {
+  body {
+    margin: 10px;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

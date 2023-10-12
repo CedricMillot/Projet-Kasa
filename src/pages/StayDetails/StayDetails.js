@@ -1,7 +1,8 @@
 import React from "react";
-import "./StayDetails.css"; // Assurez-vous d'importer le fichier CSS
+import "./StayDetails.css";
 import { useParams } from "react-router-dom";
 import stays from "../../data/stays.json";
+import Carousel from "../../components/Carousel/Carousel";
 import Collapse from "../../components/Collapse/Collapse";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +11,6 @@ function StayDetails() {
   const { id } = useParams();
   const stay = stays.find((s) => s.id === id);
 
-  // Convertir le rating en icônes d'étoiles
   const ratingStars = [];
   for (let i = 0; i < stay.rating; i++) {
     ratingStars.push(
@@ -29,37 +29,47 @@ function StayDetails() {
     </span>
   ));
 
+  const equipmentList = stay.equipments.map((equipment, index) => (
+    <li key={index}>{equipment}</li>
+  ));
+
   return (
     <div className="navigation">
-      <div className="image-gallery"></div>
-      <div className="title-and-host">
-        <p className="title">{stay.title}</p>
-        <div className="host-and-picture">
-          <p className="host-name">{stay.host.name}</p>
-          <img
-            src={stay.host.picture}
-            alt={stay.host.name}
-            className="host-image"
-          />
+      <div className="image-gallery">
+        <Carousel />
+      </div>
+      ^
+      <div className="description-picture">
+        <div className="title-and-host">
+          <p className="title">{stay.title}</p>
+          <p className="location">{stay.location}</p>
+          <p className="tags">{tags}</p>
+        </div>
+        <div className="Picture-rating">
+          <div className="picture-name">
+            <p className="host-name">{stay.host.name}</p>
+            <img
+              src={stay.host.picture}
+              alt={stay.host.name}
+              className="host-image"
+            />
+          </div>
+          <p className="rating">{ratingStars}</p>
         </div>
       </div>
-      <div className="location-rating">
-        <p className="location">{stay.location}</p>
-        <div className="rating">{ratingStars}</div>
-      </div>
-      <div className="tags">{tags}</div>
       <div className="menu-buttons-flex">
-        <Collapse
-          title="Description"
-          description={<p className="description">{stay.description}</p>}
-          className="custom-collapse"
-        />
-
-        <Collapse
-          title="Équipements"
-          description={<p className="equipments">{stay.equipments}</p>}
-          className="custom-collapse"
-        />
+        <div className="collapse-button">
+          <Collapse
+            title="Description"
+            description={<p className="description">{stay.description}</p>}
+          />
+        </div>
+        <div className="collapse-button">
+          <Collapse
+            title="Équipements"
+            description={<ul className="equipments-list">{equipmentList}</ul>}
+          />
+        </div>
       </div>
     </div>
   );
