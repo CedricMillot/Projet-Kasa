@@ -1,10 +1,10 @@
-import "./About.css";
+import "./About.scss";
 import Banner from "../../components/Banner/Banner";
 import Collapse from "../../components/Collapse/Collapse";
 
 function About() {
   return (
-    <div>
+    <div className="menu-collapse">
       <Banner imageSrc="/Paysage2.jpg" />
       <div className="menu-container">
         <Collapse

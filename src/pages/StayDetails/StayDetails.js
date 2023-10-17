@@ -1,16 +1,20 @@
 import React from "react";
-import "./StayDetails.css";
+import "./StayDetails.scss";
 import { useParams } from "react-router-dom";
 import stays from "../../data/stays.json";
 import Carousel from "../../components/Carousel/Carousel";
 import Collapse from "../../components/Collapse/Collapse";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
+import NotFound from "../NotFound/NotFound";
 
 function StayDetails() {
   const { id } = useParams();
   const stay = stays.find((s) => s.id === id);
 
+  if (!stay) {
+    return <NotFound />;
+  }
   const ratingStars = [];
   for (let i = 0; i < stay.rating; i++) {
     ratingStars.push(
@@ -35,10 +39,8 @@ function StayDetails() {
 
   return (
     <div className="navigation">
-      <div className="image-gallery">
-        <Carousel />
-      </div>
-      ^
+      <Carousel />
+
       <div className="description-picture">
         <div className="title-and-host">
           <p className="title">{stay.title}</p>

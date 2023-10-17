@@ -5,7 +5,11 @@ import Stays from "../../components/Stays/Stays";
 function Home() {
   return (
     <div>
-      <Banner imageSrc="/Paysage.jpg" texte="Chez vous, partout et ailleurs" />
+      <Banner
+        imageSrc="/Paysage.jpg"
+        texte="Chez vous, 
+        partout et ailleurs"
+      />
       <Stays />
     </div>
   );

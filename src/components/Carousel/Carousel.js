@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import stays from "../../data/stays.json";
-import "./Carousel.css";
+import "./Carousel.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -28,10 +28,10 @@ const Carousel = () => {
   }
 
   return (
-    <div className="carousel-container">
+    <div className="image-gallery">
       <img
         src={pictures[currentIndex]}
-        alt={`Picture ${currentIndex + 1}`}
+        alt={`Gallery ${currentIndex + 1}`}
         className="carousel-image"
       />
       <FontAwesomeIcon
