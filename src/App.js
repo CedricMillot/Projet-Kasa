@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import "./App.scss";
+import "./App.css";
 import NotFound from "./pages/NotFound/NotFound";
 import StayDetails from "./pages/StayDetails/StayDetails";
 import About from "./pages/About/About";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Stays.scss";
+import "./Stays.css";
 import stays from "../../data/stays.json";
 
 function Stays() {

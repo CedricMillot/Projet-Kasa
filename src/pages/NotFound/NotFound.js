@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Si vous utilisez React Router pour gérer les routes
-import "./NotFound.scss"; // Importez le fichier SASS
+import "./NotFound.css"; // Importez le fichier SASS
 
 const NotFound = () => {
   return (

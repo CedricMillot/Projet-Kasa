@@ -1,5 +1,5 @@
 import React from "react";
-import "./StayDetails.scss";
+import "./StayDetails.css";
 import { useParams } from "react-router-dom";
 import stays from "../../data/stays.json";
 import Carousel from "../../components/Carousel/Carousel";

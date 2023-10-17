@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Footer.scss";
+import "./Footer.css";
 
 function Footer() {
   const logoPath = process.env.PUBLIC_URL + "/LOGO.png";
