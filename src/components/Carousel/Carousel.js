@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import stays from "../../data/stays.json";
-import "./Carousel.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import "./Carousel.scss";
 
 const Carousel = () => {
   const { id } = useParams();
@@ -34,16 +29,27 @@ const Carousel = () => {
         alt={`Gallery ${currentIndex + 1}`}
         className="carousel-image"
       />
-      <FontAwesomeIcon
-        icon={faChevronLeft}
-        onClick={goToPrevious}
-        className="icon-button icon-left"
-      />
-      <FontAwesomeIcon
-        icon={faChevronRight}
-        onClick={goToNext}
-        className="icon-button icon-right"
-      />
+      {pictures.length > 1 ? (
+        <img
+          src="/Vector-left.png"
+          alt="Previous"
+          onClick={goToPrevious}
+          className="icon-button icon-left"
+        />
+      ) : null}
+      {pictures.length > 1 ? (
+        <img
+          src="/Vector-right.png"
+          alt="Next"
+          onClick={goToNext}
+          className="icon-button icon-right"
+        />
+      ) : null}
+      {pictures.length > 1 ? (
+        <span className="counter">
+          {currentIndex + 1}/{pictures.length}
+        </span>
+      ) : null}
     </div>
   );
 };

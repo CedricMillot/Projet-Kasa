@@ -1,11 +1,9 @@
 import React from "react";
-import "./StayDetails.css";
+import "./StayDetails.scss";
 import { useParams } from "react-router-dom";
 import stays from "../../data/stays.json";
 import Carousel from "../../components/Carousel/Carousel";
 import Collapse from "../../components/Collapse/Collapse";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
 import NotFound from "../NotFound/NotFound";
 
 function StayDetails() {
@@ -18,12 +16,12 @@ function StayDetails() {
   const ratingStars = [];
   for (let i = 0; i < stay.rating; i++) {
     ratingStars.push(
-      <FontAwesomeIcon key={i} icon={solidStar} style={{ color: "#FF6060" }} />
+      <img key={i} src="/Star-red.png" className="Star" alt="Star" />
     );
   }
   for (let i = stay.rating; i < 5; i++) {
     ratingStars.push(
-      <FontAwesomeIcon key={i} icon={solidStar} style={{ color: "#E3E3E3" }} />
+      <img key={i} src="/Star.png" className="Star" alt="Star" />
     );
   }
 

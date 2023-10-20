@@ -1,28 +1,32 @@
+@import '../styles/style.scss';
+
+
 .not-found {
-  color: #ff6060;
+  @include custom-text-style; 
   text-align: center;
-  font-family: Montserrat;
   font-size: 288px;
-  font-style: normal;
   font-weight: 800;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  @media (max-width: 800px) {
+    font-size: 150px;
+  }
 }
 .not-found-paragraph {
   text-align: center;
-  color: #ff6060;
-  font-family: Montserrat;
+  @include custom-text-style; 
   font-size: 36px;
-  font-style: normal;
-  font-weight: 500;
+  @media (max-width: 800px) {
+    font-size: 20px;
+  
+    
+  }
+
 }
 .link-to-home {
-  color: #ff6060;
-  font-family: Montserrat;
+  @include custom-text-style; 
   font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 142.6%;
   text-decoration-line: underline;
   display: flex;
   justify-content: center;

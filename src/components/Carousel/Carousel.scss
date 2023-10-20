@@ -1,6 +1,19 @@
 .image-gallery {
   position: relative;
 
+  .counter{
+    position: absolute;
+    top: 550px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: bold; 
+
+
+
+  }
+
   .carousel-image {
     object-fit: cover;
     width: 100%;

@@ -1,3 +1,6 @@
+@import '../../pages/styles/style.scss';
+
+
 .header {
   display: flex;
   align-items: center;
@@ -8,8 +11,8 @@
   margin-top: 30px;
 
   .nav-list {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
+
 
     .nav-item {
       margin-right: 20px;
@@ -17,12 +20,29 @@
   }
 }
 
+.link {
+  color:#FF6060 ;
+  text-decoration: none; 
+}
 
+.link:hover {
+  text-decoration: underline; 
+}
+
+.link:active {
+  text-decoration: underline; 
+}
+
+@media screen and (max-width: 800px) {
+  .nav-list .link {
+    text-transform: uppercase;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .header {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
+
 
     .logo {
       width: 30%;
@@ -33,8 +53,7 @@
     }
 
     .nav-list {
-      display: flex;
-      flex-direction: row;
+      @include flex-row;
       padding: 0;
     }
   }
