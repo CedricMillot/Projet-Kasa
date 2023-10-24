@@ -1,14 +1,16 @@
-@mixin custom-text-style {
-  color: #FF6060;
+$maCouleur: #FF6060;
+
+@mixin custom-text-style($couleur: $maCouleur) {
+  color: $couleur;
   font-family: Montserrat;
   font-style: normal;
 }
 
-@mixin custom-styles {
-  background-color: #FF6060;
+@mixin custom-styles($couleur: $maCouleur) {
+  background-color: $couleur;
   color: #FFF;
   font-family: Montserrat;
-} 
+}
 
 @mixin flexbox-styles {
   display: flex;
@@ -20,4 +22,3 @@
   display: flex;
   flex-direction: row;
 }
-

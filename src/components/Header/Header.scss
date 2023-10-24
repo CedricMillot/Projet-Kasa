@@ -20,26 +20,33 @@
   }
 }
 
+/* Header.scss */
 .link {
-  color:#FF6060 ;
   text-decoration: none; 
+  @include custom-text-style; 
+
+
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.active {
+    text-decoration: underline; 
+  }
+
+  &:active {
+    text-decoration: underline; 
+  }
 }
 
-.link:hover {
-  text-decoration: underline; 
-}
-
-.link:active {
-  text-decoration: underline; 
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
   .nav-list .link {
     text-transform: uppercase;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
   .header {
     @include flex-row;
 

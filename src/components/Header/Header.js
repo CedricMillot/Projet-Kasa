@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.scss";
 
 function Header() {
-  // Utilisez le chemin relatif vers le logo dans le dossier public
   const logoPath = process.env.PUBLIC_URL + "/LOGO.jpg";
 
   return (
@@ -14,14 +13,14 @@ function Header() {
       <nav className="nav">
         <ul className="nav-list">
           <li className="nav-item">
-            <Link to="/" className="link">
+            <NavLink to="/" className="link">
               Accueil
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="link">
+            <NavLink to="/about" className="link">
               A propos
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

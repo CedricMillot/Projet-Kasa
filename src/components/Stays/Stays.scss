@@ -15,17 +15,16 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
-    //z-index: 1000;
+    
   }
   .stay-container {
-    //margin: 30px;
+   
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    // display: inline-block;
     height: 340px;
     width: 30%;
-    // max-width: 400px;
+    
 
     .thumbnail {
       object-fit: cover;
@@ -52,6 +51,23 @@
 
   
   @media screen and (max-width: 1110px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #f6f6f6;
+      border-radius: 25px;
+      gap: 30px;
+      padding: 30px;
+      margin-top: 30px;
+
+    .stay-container {
+      width: 40%;
+      height: 300px;
+      margin: 0;
+      
+    }
+  }
+  @media screen and (max-width: 720px) {
     background-color: white;
     padding: 0;
     width: 100%;
