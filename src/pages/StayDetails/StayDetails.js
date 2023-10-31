@@ -37,7 +37,7 @@ function StayDetails() {
 
   return (
     <div className="navigation">
-      <Carousel />
+      <Carousel pictures={stay.pictures} />
 
       <div className="description-picture">
         <div className="title-and-host">

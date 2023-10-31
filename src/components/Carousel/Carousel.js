@@ -1,27 +1,28 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import stays from "../../data/stays.json";
 import "./Carousel.scss";
 
-const Carousel = () => {
-  const { id } = useParams();
-  const accommodation = stays.find((stay) => stay.id === id);
-  const { pictures } = accommodation;
+const Carousel = ({ pictures }) => {
+  const [currentIndex, setCurrentIndex] = useState(0); // Initialise un état local pour suivre l'index de l'image actuellement affichée.
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  // Fonction pour passer à l'image suivante.
   const goToNext = () => {
-    setCurrentIndex((currentIndex + 1) % pictures.length);
+    if (currentIndex < pictures.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      setCurrentIndex(0);
+    }
   };
 
+  // Fonction pour passer à l'image précédente.
   const goToPrevious = () => {
-    setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length);
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    } else {
+      setCurrentIndex(pictures.length - 1);
+    }
   };
 
-  if (!accommodation) {
-    return <div className="carousel-error">Hébergement introuvable</div>;
-  }
-
+  // Affiche la galerie d'images.
   return (
     <div className="image-gallery">
       <img

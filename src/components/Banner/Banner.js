@@ -5,6 +5,7 @@ function Banner({ imageSrc, texte }) {
   return (
     <div className="banner">
       <img className="banner-picture" src={imageSrc} alt="Bande" />
+
       {texte && <p>{texte}</p>}
     </div>
   );
