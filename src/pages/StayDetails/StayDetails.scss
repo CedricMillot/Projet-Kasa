@@ -26,11 +26,14 @@
   }
   .title-and-host {
     @include custom-text-style;
+    font-size: 30px;
+
     margin-bottom: 10px;
 
     .location {
       @include custom-text-style;
       font-style: normal;
+      font-size: 20px;
       margin: 0;
     }
 
@@ -68,7 +71,7 @@
         @include custom-text-style;
         font-size: 18px;
         width: 60px;
-        margin-right: 10px;
+        margin-right: 20px;
       }
 
       .host-image {
